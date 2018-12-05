@@ -5,26 +5,23 @@
   </h1>
   
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
-
-<form action="http://localhost:8080/com_sss_majorproject_war/Login" method="POST">
+<!--<form action="http://localhost:8080/com_sss_majorproject_war/Login" method="POST">-->
 
   	<h2>Sign In</h2>
 
     <label for="loginid"><b>Username   </b></label>
-    <input type="text" placeholder="Enter Username" name="loginid" required>
+    <input type="text" placeholder="Enter Username" name="loginid" required [(ngModel)]="loginid">
     <br>
     <br>
     <label for="password"><b>Password   </b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <input type="password" placeholder="Enter Password" name="password" required [(ngModel)]="password">
     <br>
     <br>
-    <button type="submit" onclick="loginFunction()">Login</button>
+    <button type="submit" (click)="doPostLogin()">Login</button>
 
-</form>
-
-<form action="http://localhost:8080/com_sss_majorproject_war/Signup" method="POST">
 	
 	<h2>Sign Up</h2>
 
@@ -36,8 +33,21 @@
     <input type="password" placeholder="Enter Password" name="password" required>
     <br>
     <br>
-    <button type="submit">Sign Up</button>
+    <button type="submit" onclick="postSignup">Sign Up</button>
 
-</form>
+    <script>
+    	function postSignup() {
+		  $.post("http://localhost:8080/com_sss_majorproject_war/Signup",
+		    {
+		        name: "qqqq",
+		        city: "qqqq"
+		    },
+		    function(data, status){
+		        alert("Data: " + data + "\nStatus: " + status);
+		    });
+		}
+    </script>
+
+
 
 <router-outlet></router-outlet>
