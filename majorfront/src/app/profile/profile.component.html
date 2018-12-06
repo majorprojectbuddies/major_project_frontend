@@ -23,31 +23,31 @@
         <option *ngFor="let designation of designations" [(ngValue)]="designation.id">{{designation.text}}</option>
 </select>
 
-		<p>{{ selectedDesignation }}</p>
+	
 
 <select [(ngModel)]="selectedHours">
         <option *ngFor="let hour of hours" [(ngValue)]="hour.value">{{hour.value}}</option>
 </select>
 
-		<p>{{ selectedHour }}</p>
+	
 
 <select [(ngModel)]="selectedCourse1">
         <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
 </select>
 
-        <p>{{ selectedCourse1 }}</p>
+      
 
 <select [(ngModel)]="selectedCourse2">
         <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
 </select>
 
-        <p>{{ selectedCourse2 }}</p>
+       
 
 <select [(ngModel)]="selectedCourse3">
         <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
 </select>
 
-        <p>{{ selectedCourse3 }}</p> 
+       
 
 </div>
 <br>
@@ -385,7 +385,6 @@
 	</tbody>
 
 </div>
-{{ val00 }}
 <div>
 	
 

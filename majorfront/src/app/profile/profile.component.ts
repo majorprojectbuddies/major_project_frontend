@@ -278,6 +278,7 @@ export class ProfileComponent implements OnInit {
             (data : any ) => {
                 console.log("POST Request for update is successful ", data);
                 console.log(data);
+                alert("Data Updated!");
             },
             error => {
                 console.log("Error", error);
