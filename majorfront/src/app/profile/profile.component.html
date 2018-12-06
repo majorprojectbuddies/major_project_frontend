@@ -1,3 +1,102 @@
-<p>
-  profile works! {{message}}
-</p>
+<!-- display user id -->
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel>
+    <ng-template ngbPanelTitle>
+      <span><b>{{ message }}</b></span>
+    </ng-template>
+    <ng-template ngbPanelContent>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
+
+<br>
+
+<label for="loginid"><b>Name   </b></label>
+    <input type="text" [(ngModel)] = "facultyName" placeholder="Enter Your Name" name="facultyName" required >
+<!-- dropdowns -->
+
+<div class="row">
+
+  <!-- <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary"  [(ngModel)] = "selectedDesignation" id="dropdownBasic1" ngbDropdownToggle >Designation</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item" ngValue="Professor">Professor</button>
+        <button class="dropdown-item" ngValue="Professfsdor">Associate Professor</button>
+        <button class="dropdown-item" ngValue="Professofdsffdsr">Assistant Professor</button>
+        <button class="dropdown-item" ngValue="Professosr">Research Scholar</button>
+        <button class="dropdown-item" ngValue="Professssor">Guest Faculty</button>
+        <button class="dropdown-item" ngValue="Professeor">UGC Prof</button>
+      </div>
+    </div>
+  </div>
+  <p>{{ selectedDesignation }}</p>
+
+
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>No of teaching Hours</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button class="dropdown-item" >6</button>
+        <button class="dropdown-item">8</button>
+        <button class="dropdown-item">10</button>
+        <button class="dropdown-item">12</button>
+        <button class="dropdown-item">14</button>
+        <button class="dropdown-item">16</button>
+      </div>
+    </div>
+  </div> -->
+
+<!-- courses -->
+
+<!-- <select [(ngModel)]="selectedDesignation">
+        <option [value] = "1">Professor</button>
+        <option [value] = "2">Associate Professor</button>
+        <option [value] = "3">Assistant Professor</button>
+        <option [value] = "4">Research Scholar</button>
+        <option [value] = "5">Guest Faculty</button>
+        <option [value] = "6">UGC Prof</button>
+</select> -->
+
+
+<select [(ngModel)]="selectedDesignation">
+        <option *ngFor="let designation of designations" [(ngValue)]="designation.id">{{designation.text}}</option>
+</select>
+
+		<p>{{ selectedDesignation }}</p>
+
+<select [(ngModel)]="selectedHours">
+        <option *ngFor="let hour of hours" [(ngValue)]="hour.value">{{hour.value}}</option>
+</select>
+
+		<p>{{ selectedHour }}</p>
+
+<select [(ngModel)]="selectedCourse1">
+        <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
+</select>
+
+        <p>{{ selectedCourse1 }}</p>
+
+<select [(ngModel)]="selectedCourse2">
+        <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
+</select>
+
+        <p>{{ selectedCourse2 }}</p>
+
+<select [(ngModel)]="selectedCourse3">
+        <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
+</select>
+
+        <p>{{ selectedCourse3 }}</p> 
+
+</div>
+<br>
+<div>
+	
+
+<!-- 	<label>Value1:
+    <input type="checkbox" [(ngModel)]="val">
+  </label><br/> -->
+<button id = "updateButton" (click)= "onUpdateClick()">Update</button>
+</div>

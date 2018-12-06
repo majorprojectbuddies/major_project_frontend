@@ -35,7 +35,7 @@ export class LoginComponentComponent implements OnInit {
             "password": this.password_signin
         })
         .subscribe(
-            data => {
+            (data : any ) => {
                 console.log("POST Request is successful ", data);
                 if(data.facultyResponse.facultyid=="null"){
                   alert("Invalid UserId or Password!");
@@ -59,7 +59,7 @@ export class LoginComponentComponent implements OnInit {
             "password": this.password_signup
         })
         .subscribe(
-            data => {
+            (data : any ) => {
                 console.log("POST Request is successful ", data);
                 if(data.facultyResponse.facultyid=="null"){
                   alert("User Already Exists!");
