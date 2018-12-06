@@ -18,47 +18,6 @@
 
 <div class="row">
 
-  <!-- <div class="col">
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary"  [(ngModel)] = "selectedDesignation" id="dropdownBasic1" ngbDropdownToggle >Designation</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button class="dropdown-item" ngValue="Professor">Professor</button>
-        <button class="dropdown-item" ngValue="Professfsdor">Associate Professor</button>
-        <button class="dropdown-item" ngValue="Professofdsffdsr">Assistant Professor</button>
-        <button class="dropdown-item" ngValue="Professosr">Research Scholar</button>
-        <button class="dropdown-item" ngValue="Professssor">Guest Faculty</button>
-        <button class="dropdown-item" ngValue="Professeor">UGC Prof</button>
-      </div>
-    </div>
-  </div>
-  <p>{{ selectedDesignation }}</p>
-
-
-  <div class="col">
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>No of teaching Hours</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button class="dropdown-item" >6</button>
-        <button class="dropdown-item">8</button>
-        <button class="dropdown-item">10</button>
-        <button class="dropdown-item">12</button>
-        <button class="dropdown-item">14</button>
-        <button class="dropdown-item">16</button>
-      </div>
-    </div>
-  </div> -->
-
-<!-- courses -->
-
-<!-- <select [(ngModel)]="selectedDesignation">
-        <option [value] = "1">Professor</button>
-        <option [value] = "2">Associate Professor</button>
-        <option [value] = "3">Assistant Professor</button>
-        <option [value] = "4">Research Scholar</button>
-        <option [value] = "5">Guest Faculty</button>
-        <option [value] = "6">UGC Prof</button>
-</select> -->
-
 
 <select [(ngModel)]="selectedDesignation">
         <option *ngFor="let designation of designations" [(ngValue)]="designation.id">{{designation.text}}</option>
@@ -92,6 +51,341 @@
 
 </div>
 <br>
+<div>
+	
+	<thead>
+	<tr>
+	  <th>8-9</th>
+	  <th>9-10</th>
+	  <th>10-11</th>
+	  <th>11-12</th>
+	  <th>12-1</th>
+	  <th>1-2</th>
+	  <th>2-3</th>
+	  <th>3-4</th>
+	  <th>4-5</th>
+	  <th>5-6</th>
+
+	</tr>
+	</thead>
+
+	<tbody>
+<!-- 		row 1 -->
+	<tr>
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val00">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val01">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val02">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val03">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val04">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val05">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val06">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val07">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val08">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val09">
+			</div>
+		  </td>	  
+	</tr>
+
+<!-- 	row 2 -->
+<tr>
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val10">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val11">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val12">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val13">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val14">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val15">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val16">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val17">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val18">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val19">
+			</div>
+		  </td>	  
+	</tr>
+
+<!-- 	row 3 -->
+<tr>
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val20">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val21">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val22">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val23">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val24">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val25">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val26">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val27">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val28">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val29">
+			</div>
+		  </td>	  
+	</tr>
+<!-- row 4 -->
+<tr>
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val30">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val31">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val32">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val33">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val34">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val35">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val36">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val37">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val38">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val39">
+			</div>
+		  </td>	  
+	</tr>
+<!-- row 5 -->
+<tr>
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val40">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val41">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val42">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val43">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val44">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val45">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val46">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val47">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val48">
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<input type="checkbox" [(ngModel)]="val49">
+			</div>
+		  </td>	  
+	</tr>
+	</tbody>
+
+</div>
+{{ val00 }}
 <div>
 	
 
