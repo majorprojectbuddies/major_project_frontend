@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LogincredentialsService } from '../logincredentials.service';
 import { Router } from '@angular/router';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { AdmincredentialsService } from '../admincredentials.service';
 
 
 @Component({
@@ -102,13 +103,21 @@ export class ProfileComponent implements OnInit {
   selectedCourse3 = null;
 
 
-  constructor( private logincredentialsService: LogincredentialsService , private router: Router , private http: HttpClient) { }
+  constructor( private logincredentialsService: LogincredentialsService , private admincredentialsService : AdmincredentialsService, private router: Router , private http: HttpClient) { }
 
+  adminMessage : string;
   ngOnInit() {
+    this.admincredentialsService.currentMessage.subscribe(adminMessage => this.adminMessage = adminMessage);
+    console.log("adminMessage in login " + this.adminMessage);
     this.logincredentialsService.currentMessage.subscribe(message => this.message = message);
     console.log("message in profile " + this.message);
     if(this.message == "default message"){
     	this.router.navigate(['']);
+    }
+    if(this.message == "admin"){
+      this.admincredentialsService.changeMessage(this.message);
+      console.log("adminmessaage is : " + this.adminMessage);
+      this.router.navigate(['admin']);
     }
 
     this.http.post(this.fetchDataUrl,

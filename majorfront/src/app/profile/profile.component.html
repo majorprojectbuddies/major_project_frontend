@@ -19,10 +19,10 @@
 <div class="row">
 
 
+
 <select [(ngModel)]="selectedDesignation">
         <option *ngFor="let designation of designations" [(ngValue)]="designation.id">{{designation.text}}</option>
 </select>
-
 	
 
 <select [(ngModel)]="selectedHours">
@@ -74,7 +74,7 @@
 	<tr>
 		  <td>
 		  	<div>
-  				<input type="checkbox" [(ngModel)]="val00">
+				<input type="checkbox" [(ngModel)]="val00">
 			</div>
 		  </td>
 

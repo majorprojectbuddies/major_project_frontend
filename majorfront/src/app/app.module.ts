@@ -9,15 +9,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
+import { AdmincredentialsService } from './admincredentials.service';
 import { ProfileComponent } from './profile/profile.component';
 import { LogincredentialsService } from './logincredentials.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 
 
 const appRoutes: Routes = [
 { path: 'profile', component: ProfileComponent },
 { path: '', component: LoginComponentComponent },
+{ path: 'admin', component: AdminPortalComponent },
   { path: '**', component: PageNotFoundComponent }
+  
 ];
 
 @NgModule({
@@ -25,7 +29,8 @@ const appRoutes: Routes = [
     AppComponent,
     PageNotFoundComponent,
     LoginComponentComponent,
-    ProfileComponent
+    ProfileComponent,
+    AdminPortalComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -39,7 +44,7 @@ const appRoutes: Routes = [
     NgbModule,
     BrowserAnimationsModule
   ],
-  providers: [ LogincredentialsService],
+  providers: [ LogincredentialsService, AdmincredentialsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
