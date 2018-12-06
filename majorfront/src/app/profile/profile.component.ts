@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LogincredentialsService } from '../logincredentials.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  message:string;
+  constructor( private logincredentialsService: LogincredentialsService , private router: Router ) { }
 
   ngOnInit() {
+    this.logincredentialsService.currentMessage.subscribe(message => this.message = message);
+    console.log("message in profile " + this.message);
+    if(this.message == "default message"){
+    	this.router.navigate(['']);
+    }
   }
 
 }

@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LogincredentialsService } from '../logincredentials.service';
 
 @Component({
   selector: 'app-login-component',
@@ -10,7 +11,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponentComponent implements OnInit {
 
-  ngOnInit(){}
+  message: string;
+  ngOnInit(){
+    this.logincredentialsService.currentMessage.subscribe(message => this.message = message);
+    console.log("message in login " + this.message);
+  }
 
   title = 'Time Table Scheduler';
   loginUrl = "http://localhost:8080/Time_Table_Scheduler_war/Login";
@@ -20,7 +25,7 @@ export class LoginComponentComponent implements OnInit {
   loginid_signup = "";
   password_signup = "";
 
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient,private router: Router, private logincredentialsService: LogincredentialsService) { }
 
   onLoginClick(){
   console.log(this.loginid_signin + this.password_signin);
@@ -32,7 +37,13 @@ export class LoginComponentComponent implements OnInit {
         .subscribe(
             data => {
                 console.log("POST Request is successful ", data);
-                this.router.navigate(['profile',this.loginid_signin]);
+                if(data.facultyResponse.facultyid=="null"){
+                  alert("Invalid UserId or Password!");
+                }else{
+                  this.logincredentialsService.changeMessage(this.loginid_signin);
+                  this.router.navigate(['profile']);
+                }
+                
             },
             error => {
                 console.log("Error", error);
@@ -50,6 +61,12 @@ export class LoginComponentComponent implements OnInit {
         .subscribe(
             data => {
                 console.log("POST Request is successful ", data);
+                if(data.facultyResponse.facultyid=="null"){
+                  alert("User Already Exists!");
+                }else{
+                  this.logincredentialsService.changeMessage(this.loginid_signup);
+                  this.router.navigate(['profile']);
+                }
             },
             error => {
                 console.log("Error", error);

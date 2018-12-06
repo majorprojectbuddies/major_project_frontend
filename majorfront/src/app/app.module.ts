@@ -9,9 +9,10 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LogincredentialsService } from './logincredentials.service';
 
 const appRoutes: Routes = [
-{ path: 'profile/:loginid', component: ProfileComponent },
+{ path: 'profile', component: ProfileComponent },
 { path: '', component: LoginComponentComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ LogincredentialsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

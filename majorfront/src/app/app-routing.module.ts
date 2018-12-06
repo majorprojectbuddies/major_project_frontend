@@ -7,7 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
-{ path: 'profile/:loginid', component: ProfileComponent },
+{ path: 'profile', component: ProfileComponent },
 { path: '', component: LoginComponentComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
