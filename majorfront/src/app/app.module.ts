@@ -16,6 +16,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { TimetabledataService } from './timetabledata.service';
+import { AdminprofileService } from './adminprofile.service';
 
 
 const appRoutes: Routes = [
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     NgbModule,
     BrowserAnimationsModule
   ],
-  providers: [ LogincredentialsService, AdmincredentialsService , TimetabledataService],
+  providers: [ LogincredentialsService, AdmincredentialsService , TimetabledataService , AdminprofileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

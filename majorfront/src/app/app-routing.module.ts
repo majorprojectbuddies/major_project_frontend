@@ -8,6 +8,7 @@ import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { TimetabledataService } from './timetabledata.service';
 import { TimetableComponent } from './timetable/timetable.component';
 
+
 const routes: Routes = [
 { path: 'profile', component: ProfileComponent },
 { path: '', component: LoginComponentComponent },

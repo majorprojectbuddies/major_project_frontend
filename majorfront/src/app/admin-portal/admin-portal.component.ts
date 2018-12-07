@@ -3,6 +3,7 @@ import { AdmincredentialsService } from '../admincredentials.service';
 import { Router } from '@angular/router';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { TimetabledataService } from '../timetabledata.service';
+import { AdminprofileService } from '../adminprofile.service';
 
 @Component({
   selector: 'app-admin-portal',
@@ -12,6 +13,7 @@ import { TimetabledataService } from '../timetabledata.service';
 export class AdminPortalComponent implements OnInit {
 
   timetableMessage: string;
+  adminprofileMessage : string;
   adminMessage : string;
   selectedSlots = true;
   selectedView = true;
@@ -21,7 +23,7 @@ export class AdminPortalComponent implements OnInit {
 
   fetchFacultyDataUrl = "http://localhost:8080/Time_Table_Scheduler_war/fetchAllFacultyData";
 
-  constructor( private admincredentialsService: AdmincredentialsService, private router: Router , private http: HttpClient , private timetabledataService: TimetabledataService) { }
+  constructor( private admincredentialsService: AdmincredentialsService, private router: Router , private http: HttpClient , private timetabledataService: TimetabledataService , private adminprofileService : AdminprofileService) { }
 
   ngOnInit() {
   	this.admincredentialsService.currentMessage.subscribe(adminMessage => this.adminMessage = adminMessage);
@@ -38,6 +40,8 @@ export class AdminPortalComponent implements OnInit {
     this.timetabledataService.currentMessage.subscribe(timetableMessage => this.timetableMessage = timetableMessage);
     console.log("time table message in admin portal : " + this.timetableMessage);
 
+    this.adminprofileService.currentMessage.subscribe(adminprofileMessage => this.adminprofileMessage = adminprofileMessage);
+
     this.http.get(this.fetchFacultyDataUrl).subscribe(
     ( data : any ) => {
       console.log(data);
@@ -45,6 +49,12 @@ export class AdminPortalComponent implements OnInit {
     });
   }
 
+  UpdateTimeTableClick(val : string){
+    console.log("faculty is" + val);
+    this.adminprofileService.changeMessage(val);
+    this.router.navigate(['profile']);
+
+  }
 
   addCentralizedSlots(){
   	console.log("add slots");

@@ -3,7 +3,7 @@ import { LogincredentialsService } from '../logincredentials.service';
 import { Router } from '@angular/router';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { AdmincredentialsService } from '../admincredentials.service';
-
+import { AdminprofileService } from '../adminprofile.service';
 
 @Component({
   selector: 'app-profile',
@@ -12,6 +12,7 @@ import { AdmincredentialsService } from '../admincredentials.service';
 })
 export class ProfileComponent implements OnInit {
 
+  adminprofileMessage : string;
   updateUrl = "http://localhost:8080/Time_Table_Scheduler_war/updateProfile";
   message:string;
   facultyName: string;
@@ -103,7 +104,7 @@ export class ProfileComponent implements OnInit {
   selectedCourse3 = null;
 
 
-  constructor( private logincredentialsService: LogincredentialsService , private admincredentialsService : AdmincredentialsService, private router: Router , private http: HttpClient) { }
+  constructor( private logincredentialsService: LogincredentialsService , private admincredentialsService : AdmincredentialsService, private router: Router , private http: HttpClient, private adminprofileService: AdminprofileService) { }
 
   adminMessage : string;
   ngOnInit() {
@@ -111,13 +112,18 @@ export class ProfileComponent implements OnInit {
     console.log("adminMessage in login " + this.adminMessage);
     this.logincredentialsService.currentMessage.subscribe(message => this.message = message);
     console.log("message in profile " + this.message);
+
+    this.adminprofileService.currentMessage.subscribe(adminprofileMessage => this.adminprofileMessage = adminprofileMessage);
+
     if(this.message == "default message"){
     	this.router.navigate(['']);
     }
-    if(this.message == "admin"){
+    if(this.message == "admin" && this.adminprofileMessage == "default message"){
       this.admincredentialsService.changeMessage(this.message);
       console.log("adminmessaage is : " + this.adminMessage);
       this.router.navigate(['admin']);
+    }else if (this.message == "admin" && this.adminprofileMessage != "default message"){
+      this.message = this.adminprofileMessage;
     }
 
     this.http.post(this.fetchDataUrl,
@@ -287,7 +293,13 @@ export class ProfileComponent implements OnInit {
             (data : any ) => {
                 console.log("POST Request for update is successful ", data);
                 console.log(data);
-                alert("Data Updated!");
+                if(this.adminprofileMessage == "default message"){
+                    alert("Data Updated!");
+                }else{
+                    this.message = "admin";
+                    this.router.navigate(['admin']);
+                }
+                
             },
             error => {
                 console.log("Error", error);
