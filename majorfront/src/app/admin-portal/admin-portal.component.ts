@@ -22,6 +22,7 @@ export class AdminPortalComponent implements OnInit {
   selectedGenerate = true;
 
   facultyResponseList : any ;
+  generatedfacultyResponseList : any;
 
   fetchFacultyDataUrl = "http://localhost:8080/Time_Table_Scheduler_war/fetchAllFacultyData";
   generateTimeTableUrl = "http://localhost:8080/Time_Table_Scheduler_war/generateTimeTable";
@@ -91,7 +92,8 @@ export class AdminPortalComponent implements OnInit {
   	this.selectedGenerate = false;
     this.http.get(this.generateTimeTableUrl).subscribe(
     ( data : any ) => {
-      console.log(data);      
+      console.log(data); 
+      this.generatedfacultyResponseList = data.facultyResponses; 
     });
 
   }
