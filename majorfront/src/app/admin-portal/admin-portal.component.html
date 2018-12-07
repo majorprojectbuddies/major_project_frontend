@@ -61,48 +61,371 @@
 	<p>
 		view selected
 	</p>
-	
-	<tbody>
-	<tr>
-		  <td>
-		  	<div *ngFor="let faculty of facultyResponseList">
-		  		<p>8-9  9-10  10-11  11-12  12-1  1-2  2-3  3-4  4-5  5-6</p>
-				{{faculty.timeTable.timetable[0]}}
-				<br>
-				{{faculty.timeTable.timetable[1]}}
-				<br>
-				{{faculty.timeTable.timetable[2]}}
-				<br>
-				{{faculty.timeTable.timetable[3]}}
-				<br>
-				{{faculty.timeTable.timetable[4]}}
-				<br><br><br>
-				<button id = "updateTimeTable" (click)= "UpdateTimeTableClick(faculty.facultyid)">Update TimeTable</button><br>
-				<br><br><br><br><br><br>
-
-			</div>
-			<br><br>
-		</td>>
-	</tr>
-	</tbody>
-	<!-- <div *ngFor="let faculty of facultyResponseList">
-		{{faculty.facultyid}}
+ 
+	<div *ngFor="let faculty of facultyResponseList">
 		
-		<br>
-		<div *ngFor = "let tt of facultyResponseList.timeTable">
-			<div *ngFor = "let ttslot of ttday">
-				{{ttslot}}
-			</div>inside tt
-			<div *ngFor = "let ttday of tt.timetable">
-				inside ttday
-				<div *ngFor = "let ttslot of ttday">
-					inside ttslot
-					{{ttslot}}
+		<thead>
+		<tr>
+		  <th>&nbsp;&nbsp;&nbsp;&nbsp;Day&nbsp;&nbsp;&nbsp;&nbsp;</th>	
+		  <th>8-9&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>9-10&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>10-11&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>11-12&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>12-1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>1-2&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>2-3&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>3-4&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>4-5&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		  <th>5-6&nbsp;&nbsp;&nbsp;&nbsp;</th>
+
+		</tr>
+		</thead>
+
+		<tbody>
+	<!-- 		row 1 -->
+		<tr>
+			  <td>
+			  	<div style="width: 120px;">
+					&nbsp;&nbsp;&nbsp;<b><i>Monday</i></b>
 				</div>
-				<br>
-			</div>
-		</div>
-	</div> -->
+			  </td>
+			  <td>
+			  	<div style="width: 75px;">
+			  		{{faculty.timeTable.timetable[0][0]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][1]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][2]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][3]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][4]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][5]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][6]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][7]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][8]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[0][9]}}
+				</div>
+			  </td>	  
+		</tr>
+
+	<!-- 	row 2 -->
+	<tr>
+			  <td>
+			  	<div style="width: 120px;">
+					&nbsp;&nbsp;&nbsp;<b><i>Tuesday</i></b>
+				</div>
+			  </td>
+			  <td>
+			  	<div style="width: 75px;">
+			  		{{faculty.timeTable.timetable[1][0]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][1]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][2]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][3]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][4]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][5]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][6]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][7]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][8]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[1][9]}}
+				</div>
+			  </td>	  
+		</tr>
+
+	<!-- 	row 3 -->
+	<tr>
+			  <td>
+			  	<div style="width: 120px;">
+					&nbsp;&nbsp;&nbsp;<b><i>Wednesday</i></b>
+				</div>
+			  </td>
+			  <td>
+			  	<div style="width: 75px;">
+			  		{{faculty.timeTable.timetable[2][0]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][1]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][2]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][3]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][4]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][5]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][6]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][7]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][8]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[2][9]}}
+				</div>
+			  </td>	  
+		</tr>
+	<!-- row 4 -->
+	<tr>
+			  <td>
+			  	<div style="width: 120px;">
+					&nbsp;&nbsp;&nbsp;<b><i>Thursday</i></b>
+				</div>
+			  </td>
+			  <td>
+			  	<div style="width: 75px;">
+			  		{{faculty.timeTable.timetable[3][0]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][1]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][2]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][3]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][4]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][5]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][6]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][7]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][8]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[3][9]}}
+				</div>
+			  </td>	  
+		</tr>
+
+	<!-- row 5 -->
+	<tr>
+			  <td>
+			  	<div style="width: 120px;">
+					&nbsp;&nbsp;&nbsp;<b><i>Friday</i></b>
+				</div>
+			  </td>
+			  <td>
+			  	<div style="width: 75px;">
+			  		{{faculty.timeTable.timetable[4][0]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][1]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][2]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][3]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][4]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][5]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][6]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][7]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][8]}}
+				</div>
+			  </td>
+
+			  <td>
+			  	<div style="width: 75px;">
+	  				{{faculty.timeTable.timetable[4][9]}}
+				</div>
+			  </td>	  
+		</tr>
+
+		</tbody>
+		<br><br>
+		<button id = "updateTimeTable" (click)= "UpdateTimeTableClick(faculty.facultyid)">Update TimeTable</button><br>
+		<br><br><br>
+	</div> 
 </div>
 <div [hidden] = "selectedGenerate">
 	

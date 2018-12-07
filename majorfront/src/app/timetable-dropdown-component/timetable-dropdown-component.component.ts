@@ -21,8 +21,12 @@ export class TimetableDropdownComponentComponent implements OnInit {
   dataToSend : any ;
 
   courseList = [
-  	{ courseId : "MC111", courseName : "maths"},
-  	{ courseId : "MC121", courseName : "maths2"}
+    { courseId : "-", courseName : "-"},
+  	{ courseId : "MC310(Slot-A)", courseName : "Software Engineering (Slot-A)"},
+  	{ courseId : "MC310(Slot-C)", courseName : "Software Engineering (Slot-C)"},
+    { courseId : "MC320(Slot-B)", courseName : "Web Technology (Slot-B)"},
+    { courseId : "MC320(Slot-D)", courseName : "Web Technology (Slot-D)"},
+    { courseId : "AM501", courseName : "Introduction to Mathematical Software"}
   ];
 
   val00 = "-";
@@ -93,6 +97,7 @@ export class TimetableDropdownComponentComponent implements OnInit {
     }else {
     	this.getTTURL = this.getSectionTTURL;
     }
+    console.log(this.getTTURL,this.timetabledropdownMessage);
     this.http.post(this.getTTURL,{ groupid : this.timetabledropdownMessage})
         .subscribe(
             (data : any ) => {
