@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { TimetabledataService } from '../timetabledata.service';
 import { AdminprofileService } from '../adminprofile.service';
+import { TimetabledropdownService } from '../timetabledropdown.service';
 
 @Component({
   selector: 'app-admin-portal',
@@ -13,6 +14,7 @@ import { AdminprofileService } from '../adminprofile.service';
 export class AdminPortalComponent implements OnInit {
 
   timetableMessage: string;
+  timetabledropdownMessage : string;
   adminprofileMessage : string;
   adminMessage : string;
   selectedSlots = true;
@@ -22,14 +24,27 @@ export class AdminPortalComponent implements OnInit {
   facultyResponseList : any ;
 
   fetchFacultyDataUrl = "http://localhost:8080/Time_Table_Scheduler_war/fetchAllFacultyData";
+  generateTimeTableUrl = "http://localhost:8080/Time_Table_Scheduler_war/generateTimeTable";
 
-  constructor( private admincredentialsService: AdmincredentialsService, private router: Router , private http: HttpClient , private timetabledataService: TimetabledataService , private adminprofileService : AdminprofileService) { }
+  constructor( private admincredentialsService: AdmincredentialsService, private router: Router , private http: HttpClient , private timetabledataService: TimetabledataService , private adminprofileService : AdminprofileService, private timetabledropdownService: TimetabledropdownService) { }
 
   ngOnInit() {
   	this.admincredentialsService.currentMessage.subscribe(adminMessage => this.adminMessage = adminMessage);
     console.log("adminMessage in adminportal is " + this.adminMessage);
 
+
+    this.timetabledataService.currentMessage.subscribe(timetableMessage => this.timetableMessage = timetableMessage);
+    console.log("time table message in admin portal : " + this.timetableMessage);
+
+    this.timetabledropdownService.currentMessage.subscribe(timetabledropdownMessage => this.timetabledropdownMessage = timetabledropdownMessage);
+    console.log("time table dropdown message in admin portal : " + this.timetabledropdownMessage);
+
+
     if(this.timetableMessage == "updateOnBatchTimeTable"){
+        this.adminMessage == "admin";
+    }
+
+    if(this.timetabledropdownMessage == "updateOnSectionTimeTable"){
         this.adminMessage == "admin";
     }
 
@@ -37,8 +52,7 @@ export class AdminPortalComponent implements OnInit {
     	this.router.navigate(['']);
     }
 
-    this.timetabledataService.currentMessage.subscribe(timetableMessage => this.timetableMessage = timetableMessage);
-    console.log("time table message in admin portal : " + this.timetableMessage);
+   
 
     this.adminprofileService.currentMessage.subscribe(adminprofileMessage => this.adminprofileMessage = adminprofileMessage);
 
@@ -75,6 +89,11 @@ export class AdminPortalComponent implements OnInit {
   	this.selectedSlots = true;
   	this.selectedView = true;
   	this.selectedGenerate = false;
+    this.http.get(this.generateTimeTableUrl).subscribe(
+    ( data : any ) => {
+      console.log(data);      
+    });
+
   }
 
   a1Click(){
@@ -226,6 +245,41 @@ export class AdminPortalComponent implements OnInit {
     this.timetabledataService.changeMessage("b15");
     this.router.navigate(['admin/timetable/b15']);
   }
+
+  s1Click(){
+    this.timetabledropdownService.changeMessage("s1");
+    this.router.navigate(['admin/timetabledropdown/s1']);
+  }
  	
+  s2Click(){
+    this.timetabledropdownService.changeMessage("s2");
+    this.router.navigate(['admin/timetabledropdown/s2']);
+  }
+
+  t1Click(){
+    this.timetabledropdownService.changeMessage("t1");
+    this.router.navigate(['admin/timetabledropdown/t1']);
+  }
+  
+  t2Click(){
+    this.timetabledropdownService.changeMessage("t2");
+    this.router.navigate(['admin/timetabledropdown/t2']);
+  }
+
+  f1Click(){
+    this.timetabledropdownService.changeMessage("f1");
+    this.router.navigate(['admin/timetabledropdown/sf1']);
+  }
+  
+  f2Click(){
+    this.timetabledropdownService.changeMessage("f2");
+    this.router.navigate(['admin/timetabledropdown/f2']);
+  }
+
+  phd1Click(){
+    this.timetabledropdownService.changeMessage("phd1");
+    this.router.navigate(['admin/timetabledropdown/phd1']);
+  }
+  
 
 }

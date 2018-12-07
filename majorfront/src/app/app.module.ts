@@ -17,6 +17,9 @@ import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { TimetableComponent } from './timetable/timetable.component';
 import { TimetabledataService } from './timetabledata.service';
 import { AdminprofileService } from './adminprofile.service';
+import { TimetableDropdownComponentComponent } from './timetable-dropdown-component/timetable-dropdown-component.component';
+
+import { TimetabledropdownService } from './timetabledropdown.service';
 
 
 const appRoutes: Routes = [
@@ -24,6 +27,7 @@ const appRoutes: Routes = [
 { path: '', component: LoginComponentComponent },
 { path: 'admin', component: AdminPortalComponent },
 { path: 'admin/timetable/:userid', component: TimetableComponent },
+{ path: 'admin/timetabledropdown/:userid', component: TimetableDropdownComponentComponent },
   { path: '**', component: PageNotFoundComponent }
   
 ];
@@ -35,7 +39,8 @@ const appRoutes: Routes = [
     LoginComponentComponent,
     ProfileComponent,
     AdminPortalComponent,
-    TimetableComponent
+    TimetableComponent,
+    TimetableDropdownComponentComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -49,7 +54,7 @@ const appRoutes: Routes = [
     NgbModule,
     BrowserAnimationsModule
   ],
-  providers: [ LogincredentialsService, AdmincredentialsService , TimetabledataService , AdminprofileService],
+  providers: [ LogincredentialsService, AdmincredentialsService , TimetabledataService , AdminprofileService , TimetabledropdownService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,13 +7,14 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
 import { TimetabledataService } from './timetabledata.service';
 import { TimetableComponent } from './timetable/timetable.component';
-
+import { TimetableDropdownComponentComponent } from './timetable-dropdown-component/timetable-dropdown-component.component';
 
 const routes: Routes = [
 { path: 'profile', component: ProfileComponent },
 { path: '', component: LoginComponentComponent },
 { path: 'admin', component: AdminPortalComponent },
 { path: 'admin/timetable/:userid', component: TimetableComponent },
+{ path: 'admin/timetabledropdown/:userid', component: TimetableDropdownComponentComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
