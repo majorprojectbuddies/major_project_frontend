@@ -21,7 +21,7 @@ export class TimetableDropdownComponentComponent implements OnInit {
   dataToSend : any ;
 
   courseList = [
-    { courseId : "-", courseName : "-"},
+    { courseId : "-", courseName : ""},
   	{ courseId : "MC310(Slot-A)", courseName : "Software Engineering (Slot-A)"},
   	{ courseId : "MC310(Slot-C)", courseName : "Software Engineering (Slot-C)"},
     { courseId : "MC320(Slot-B)", courseName : "Web Technology (Slot-B)"},
