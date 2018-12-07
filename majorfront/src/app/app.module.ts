@@ -14,12 +14,15 @@ import { ProfileComponent } from './profile/profile.component';
 import { LogincredentialsService } from './logincredentials.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AdminPortalComponent } from './admin-portal/admin-portal.component';
+import { TimetableComponent } from './timetable/timetable.component';
+import { TimetabledataService } from './timetabledata.service';
 
 
 const appRoutes: Routes = [
 { path: 'profile', component: ProfileComponent },
 { path: '', component: LoginComponentComponent },
 { path: 'admin', component: AdminPortalComponent },
+{ path: 'admin/timetable/:userid', component: TimetableComponent },
   { path: '**', component: PageNotFoundComponent }
   
 ];
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     LoginComponentComponent,
     ProfileComponent,
-    AdminPortalComponent
+    AdminPortalComponent,
+    TimetableComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -44,7 +48,7 @@ const appRoutes: Routes = [
     NgbModule,
     BrowserAnimationsModule
   ],
-  providers: [ LogincredentialsService, AdmincredentialsService],
+  providers: [ LogincredentialsService, AdmincredentialsService , TimetabledataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,96 @@
 <p>
   admin-portal works!
-
-  
 </p>
+<button id = "viewTimeTable" (click)= "addCentralizedSlots()">Add Centralized Slots</button>
+<button id = "viewTimeTable" (click)= "viewTimeTableClick()">View Time Tables</button>
+<button id = "generateTimeTable" (click)= "generateTimeTableClick()">Generate Time Table</button>
+<br>
+<div [hidden] = "selectedSlots">
+	<p>
+		slots add
+	</p>
+	<br>
+<!-- 	buttons -->
+	<div>
+		<button id = "a1" (click)= "a1Click()">A1</button><br>
+		<button id = "a2" (click)= "a2Click()">A2</button><br>
+		<button id = "a3" (click)= "a3Click()">A3</button><br>
+		<button id = "a4" (click)= "a4Click()">A4</button><br>
+		<button id = "a5" (click)= "a5Click()">A5</button><br>
+		<button id = "a6" (click)= "a6Click()">A6</button><br>
+		<button id = "a7" (click)= "a7Click()">A7</button><br>
+		<button id = "a8" (click)= "a8Click()">A8</button><br>
+		<button id = "a9" (click)= "a9Click()">A9</button><br>
+		<button id = "a10" (click)= "a10Click()">A10</button><br>
+		<button id = "a11" (click)= "a11Click()">A11</button><br>
+		<button id = "a12" (click)= "a12Click()">A12</button><br>
+		<button id = "a13" (click)= "a13Click()">A13</button><br>
+		<button id = "a14" (click)= "a14Click()">A14</button><br>
+		<button id = "a15" (click)= "a15Click()">A15</button><br>
+
+		<button id = "b1" (click)= "b1Click()">B1</button><br>
+		<button id = "b2" (click)= "b2Click()">B2</button><br>
+		<button id = "b3" (click)= "b3Click()">B3</button><br>
+		<button id = "b4" (click)= "b4Click()">B4</button><br>
+		<button id = "b5" (click)= "b5Click()">B5</button><br>
+		<button id = "b6" (click)= "b6Click()">B6</button><br>
+		<button id = "b7" (click)= "b7Click()">B7</button><br>
+		<button id = "b8" (click)= "b8Click()">B8</button><br>
+		<button id = "b9" (click)= "b9Click()">B9</button><br>
+		<button id = "b10" (click)= "b10Click()">B10</button><br>
+		<button id = "b11" (click)= "b11Click()">B11</button><br>
+		<button id = "b12" (click)= "b12Click()">B12</button><br>
+		<button id = "b13" (click)= "b13Click()">B13</button><br>
+		<button id = "b14" (click)= "b14Click()">B14</button><br>
+		<button id = "b15" (click)= "b15Click()">B15</button><br>
+		
+	</div>
+</div>
+<div [hidden] = "selectedView">
+	<p>
+		view selected
+	</p>
+	
+	<tbody>
+	<tr>
+		  <td>
+		  	<div *ngFor="let faculty of facultyResponseList">
+		  		<p>8-9  9-10  10-11  11-12  12-1  1-2  2-3  3-4  4-5  5-6</p>
+				{{faculty.timeTable.timetable[0]}}
+				<br>
+				{{faculty.timeTable.timetable[1]}}
+				<br>
+				{{faculty.timeTable.timetable[2]}}
+				<br>
+				{{faculty.timeTable.timetable[3]}}
+				<br>
+				{{faculty.timeTable.timetable[4]}}
+				<br>
+				<br><br><br><br><br><br>
+			</div>
+			<br><br>
+		</td>>
+	</tr>
+	</tbody>
+	<!-- <div *ngFor="let faculty of facultyResponseList">
+		{{faculty.facultyid}}
+		
+		<br>
+		<div *ngFor = "let tt of facultyResponseList.timeTable">
+			<div *ngFor = "let ttslot of ttday">
+				{{ttslot}}
+			</div>inside tt
+			<div *ngFor = "let ttday of tt.timetable">
+				inside ttday
+				<div *ngFor = "let ttslot of ttday">
+					inside ttslot
+					{{ttslot}}
+				</div>
+				<br>
+			</div>
+		</div>
+	</div> -->
+</div>
+<div [hidden] = "selectedGenerate">
+	
+</div>
