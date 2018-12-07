@@ -11,7 +11,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class TimetableComponent implements OnInit {
 
   timetableMessage : string;
-  getFirstYearTTURL = "http://localhost:8080/Time_Table_Scheduler_war/";
+  getFirstYearTTURL = "http://localhost:8080/Time_Table_Scheduler_war/batch";
 
   val00 = false;
   val01 = false;
