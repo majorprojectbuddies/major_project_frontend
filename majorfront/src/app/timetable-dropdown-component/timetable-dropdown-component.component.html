@@ -1,3 +1,481 @@
 <p>
   timetable-dropdown-component works!
 </p>
+<br>
+<div>
+	
+	<thead>
+	<tr>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;Day&nbsp;&nbsp;&nbsp;&nbsp;</th>	
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;8-9&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;9-10&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;10-11&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;11-12&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;12-1&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;1-2&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;2-3&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;3-4&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;4-5&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	  <th>&nbsp;&nbsp;&nbsp;&nbsp;5-6&nbsp;&nbsp;&nbsp;&nbsp;</th>
+
+	</tr>
+	</thead>
+
+	<tbody>
+<!-- 		row 1 -->
+	<tr>
+		  <td>
+		  	<div>
+				&nbsp;&nbsp;&nbsp;<b><i>Monday</i></b>
+			</div>
+		  </td>
+		  <td>
+		  	<div>
+		  		<select [(ngModel)]="val00"  style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+				
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val01" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val02" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val03" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val04" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val05" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val06" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val07" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val08" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val09" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>	  
+	</tr>
+
+<!-- 	row 2 -->
+<tr>
+		  <td>
+		  	<div>
+				&nbsp;&nbsp;&nbsp;<b><i>Tuesday</i></b>
+			</div>
+		  </td>
+		  <td>
+		  	<div>
+		  		<select [(ngModel)]="val10" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+				
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val11" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val12" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val13" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val14" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val15" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val16" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val17" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val18" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val19" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>	  
+	</tr>
+
+
+<!-- 	row 3 -->
+<tr>
+		  <td>
+		  	<div>
+				&nbsp;&nbsp;&nbsp;<b><i>Wednesday</i></b>
+			</div>
+		  </td>
+		  <td>
+		  	<div>
+		  		<select [(ngModel)]="val20" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+				
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val21" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val22" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val23" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val24" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val25" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val26" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val27" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val28" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val29" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>	  
+	</tr>
+
+<!-- row 4 -->
+<tr>
+		  <td>
+		  	<div>
+				&nbsp;&nbsp;&nbsp;<b><i>Thursday</i></b>
+			</div>
+		  </td>
+		  <td>
+		  	<div>
+		  		<select [(ngModel)]="val30" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+				
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val31" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val32" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val33" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val34" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val35" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val36" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val37" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val38" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val39" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>	  
+	</tr>
+
+<!-- row 5 -->
+<tr>
+		  <td>
+		  	<div>
+				&nbsp;&nbsp;&nbsp;<b><i>Friday</i></b>
+			</div>
+		  </td>
+		  <td>
+		  	<div>
+		  		<select [(ngModel)]="val40" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+				
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val41" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val42" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val43" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val44" style="width: 75px;"> 
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val45" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val46" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val47" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val48" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>
+
+		  <td>
+		  	<div>
+  				<select [(ngModel)]="val49" style="width: 75px;">
+        			<option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}({{course.courseId}})</option>
+				</select>
+			</div>
+		  </td>	  
+	</tr>
+
+	</tbody>
+
+</div>
+<div>
+<br><br>
+
+<!-- 	<label>Value1:
+    <input type="checkbox" [(ngModel)]="val">
+  </label><br/> -->
+<button id = "updateButton" (click)= "onUpdateClick()">Update</button>
+</div>
