@@ -221,6 +221,10 @@ export class ProfileComponent implements OnInit {
     }
   }
 
+  onlogOutClick(){
+    this.router.navigate(['']);
+  }
+
   onUpdateClick(){
     console.log("update clicked");
     console.log(this.dataToSend);

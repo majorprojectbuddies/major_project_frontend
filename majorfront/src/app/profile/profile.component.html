@@ -1,58 +1,58 @@
 <!-- display user id -->
-
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-  <ngb-panel>
-    <ng-template ngbPanelTitle>
-      <span><b>{{ message }}</b></span>
-    </ng-template>
-    <ng-template ngbPanelContent>
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
+<br><div style="margin-left: 70px; margin-right: 70px;">
+	<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+	  <ngb-panel>
+	    <ng-template ngbPanelTitle>
+	      <span><b>{{ message }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary" id = "logoutButton" (click)= "onlogOutClick()">Logout</button></b></span>
+	    </ng-template>
+	    <ng-template ngbPanelContent>
+	    </ng-template>
+	  </ngb-panel>
+	</ngb-accordion>
+</div>
 
 <br>
+<br>
+<div style="margin-left: 70px; margin-right: 70px;">
+	
 
-<label for="loginid"><b>Name   </b></label>
+&nbsp;&nbsp;&nbsp;<label for="loginid"><b>Name&nbsp;&nbsp;&nbsp;</b></label>
     <input type="text" [(ngModel)] = "facultyName" placeholder="Enter Your Name" name="facultyName" required >
 <!-- dropdowns -->
-
-<div class="row">
-
-
+<br>
+&nbsp;&nbsp;&nbsp;<label ><b>Designation&nbsp;&nbsp;&nbsp;</b></label>
 
 <select [(ngModel)]="selectedDesignation">
         <option *ngFor="let designation of designations" [(ngValue)]="designation.id">{{designation.text}}</option>
 </select>
+<br>
 	
-
+&nbsp;&nbsp;&nbsp;<label ><b>Teaching Hours&nbsp;&nbsp;&nbsp;</b></label>
 <select [(ngModel)]="selectedHours">
         <option *ngFor="let hour of hours" [(ngValue)]="hour.value">{{hour.value}}</option>
 </select>
-
+<br>
 	
-
+&nbsp;&nbsp;&nbsp;<label ><b>Course 1&nbsp;&nbsp;&nbsp;</b></label>
 <select [(ngModel)]="selectedCourse1">
         <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
 </select>
-
+<br>
       
-
+&nbsp;&nbsp;&nbsp;<label ><b>Course 2&nbsp;&nbsp;&nbsp;</b></label>
 <select [(ngModel)]="selectedCourse2">
         <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
 </select>
-
+<br>
        
-
+&nbsp;&nbsp;&nbsp;<label ><b>Course 3&nbsp;&nbsp;&nbsp;</b></label>
 <select [(ngModel)]="selectedCourse3">
         <option *ngFor="let course of courseList" [(ngValue)]="course.courseId">{{course.courseName}}</option>
 </select>
-
-       
-
-</div>
 <br>
-<div>
-	
+<br>
+&nbsp;&nbsp;&nbsp;<label ><b>Tick the Slots to block!&nbsp;&nbsp;&nbsp;</b></label>
+<br>	
 	<thead>
 	<tr>
 	  <th>&nbsp;&nbsp;&nbsp;&nbsp;Day&nbsp;&nbsp;&nbsp;&nbsp;</th>	
@@ -409,13 +409,6 @@
 		  </td>	  
 	</tr>
 	</tbody>
-
-</div>
-<div>
-	
-
-<!-- 	<label>Value1:
-    <input type="checkbox" [(ngModel)]="val">
-  </label><br/> -->
-<button id = "updateButton" (click)= "onUpdateClick()">Update</button>
+	<br>
+	&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary" id = "updateButton" (click)= "onUpdateClick()">Update</button>
 </div>
