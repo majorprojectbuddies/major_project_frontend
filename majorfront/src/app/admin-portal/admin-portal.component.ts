@@ -64,6 +64,14 @@ export class AdminPortalComponent implements OnInit {
     });
   }
 
+  onlogOutClick(){
+    this.timetableMessage = "default message";
+    this.timetabledropdownMessage = "default message";
+    this.adminMessage = "default message";
+    this.adminprofileMessage = "default message";
+    this.router.navigate(['']);
+  }
+
   UpdateTimeTableClick(val : string){
     console.log("faculty is" + val);
     this.adminprofileService.changeMessage(val);

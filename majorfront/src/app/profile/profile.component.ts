@@ -20,7 +20,6 @@ export class ProfileComponent implements OnInit {
   fetchDataUrl = "http://localhost:8080/Time_Table_Scheduler_war/profile";
   timeTable : string [][];
 
-
   val00 = false;
   val01 = false;
   val02 = false;
@@ -222,8 +221,14 @@ export class ProfileComponent implements OnInit {
   }
 
   onlogOutClick(){
+
+
+    this.adminprofileMessage = "default message";
+    this.message = "default message";
+    this.adminMessage = "default message";
     this.router.navigate(['']);
   }
+
 
   onUpdateClick(){
     console.log("update clicked");
