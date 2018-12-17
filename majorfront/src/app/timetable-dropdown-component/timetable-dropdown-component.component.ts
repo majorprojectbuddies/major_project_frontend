@@ -22,11 +22,29 @@ export class TimetableDropdownComponentComponent implements OnInit {
 
   courseList = [
     { courseId : "-", courseName : ""},
+    { courseId : "X", courseName : "X"},
+
   	{ courseId : "MC310(Slot-A)", courseName : "Software Engineering (Slot-A)"},
-  	{ courseId : "MC310(Slot-C)", courseName : "Software Engineering (Slot-C)"},
-    { courseId : "MC320(Slot-B)", courseName : "Web Technology (Slot-B)"},
-    { courseId : "MC320(Slot-D)", courseName : "Web Technology (Slot-D)"},
-    { courseId : "AM501", courseName : "Introduction to Mathematical Software"}
+    
+    { courseId : "AM501", courseName : "Introduction to Mathematical Software"},
+
+    { courseId : "MC404(Slot-S)", courseName : "Matrix Computation (Slot-S)"},
+    { courseId : "MC404(Slot-S)lab", courseName : "Matrix Computation (Slot-S) Lab"},
+
+    { courseId : "MC406(Slot-P)", courseName : "Partial Differential Equation (Slot-P)"},
+    { courseId : "MC432(Slot-T)", courseName : "Fuzzy Sets and Fuzzy Logic (Slot-T)"},
+    { courseId : "MC420(Slot-Q)", courseName : "Information Theory and Coding (Slot-Q)"},
+
+    { courseId : "MC324(Slot-D)", courseName : "Big Data Analytics (Slot-D)"},
+    { courseId : "MC324(Slot-D)lab", courseName : "Big Data Analytics (Slot-D) Lab"},
+    { courseId : "MC308(Slot-B)", courseName : "Computer Networks (Slot-B)"},
+    { courseId : "MC308(Slot-B)lab", courseName : "Computer Networks (Slot-B) Lab"},
+    { courseId : "MC318(Slot-C)", courseName : "Computer Graphics (Slot-C)"},
+    { courseId : "MC318(Slot-C)lab", courseName : "Computer Graphics (Slot-C) Lab"},
+    { courseId : "MC312(Slot-A)", courseName : "Artificial Intelligence (Slot-A)"},
+    { courseId : "MC312(Slot-A)lab", courseName : "Artificial Intelligence (Slot-A) Lab"},
+    { courseId : "MC418(Slot-R)", courseName : "Optimization Techniques (Slot-R)"},
+    { courseId : "MC418(Slot-R)lab", courseName : "Optimization Techniques (Slot-R) Lab"},
   ];
 
   val00 = "-";
