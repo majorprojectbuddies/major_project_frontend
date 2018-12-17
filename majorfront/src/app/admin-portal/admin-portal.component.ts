@@ -122,7 +122,7 @@ export class AdminPortalComponent implements OnInit {
   }
 
   a4Click(){
-    this.timetabledataService.changeMessage("a14");
+    this.timetabledataService.changeMessage("a4");
     this.router.navigate(['admin/timetable/a4']);
   }
 
