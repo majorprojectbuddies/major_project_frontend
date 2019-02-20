@@ -25,8 +25,11 @@ export class AdminPortalComponent implements OnInit {
   generatedfacultyResponseList : any;
   generatedSectionsList: any;
 
+  overallTT: any;
+
   fetchFacultyDataUrl = "http://localhost:8080/Time_Table_Scheduler_war/fetchAllFacultyData";
   generateTimeTableUrl = "http://localhost:8080/Time_Table_Scheduler_war/generateTimeTable";
+  generateTimeTableAgainUrl = "http://localhost:8080/Time_Table_Scheduler_war/generateTimeTableAgain";
 
   constructor( private admincredentialsService: AdmincredentialsService, private router: Router , private http: HttpClient , private timetabledataService: TimetabledataService , private adminprofileService : AdminprofileService, private timetabledropdownService: TimetabledropdownService) { }
 
@@ -65,6 +68,14 @@ export class AdminPortalComponent implements OnInit {
     });
   }
 
+
+  convertStringToBool(val : string){
+      if(val=="sam"){
+        return true;
+      }else {
+        return false;
+      }
+  }
   
   UpdateTimeTableClick(val : string){
     console.log("faculty is" + val);
@@ -100,9 +111,31 @@ export class AdminPortalComponent implements OnInit {
     this.http.get(this.generateTimeTableUrl).subscribe(
     ( data : any ) => {
       console.log(data); 
+      this.overallTT = data;
       this.generatedfacultyResponseList = data.facultyResponses; 
       this.generatedSectionsList =  data.sections;
     });
+
+  }
+
+  generateTimeTableAgainClick(){
+    console.log("generate again");
+    console.log("data being sent is : ", this.overallTT);
+
+
+
+    this.http.post(this.generateTimeTableAgainUrl,this.overallTT)
+        .subscribe(
+            (data : any ) => {
+                console.log("POST Request for generate time table is successful ", data);
+                console.log(data);
+            },
+            error => {
+                console.log("Error: couldn't generate again", error);
+            }
+        ); 
+
+
 
   }
 
