@@ -129,6 +129,9 @@ export class AdminPortalComponent implements OnInit {
             (data : any ) => {
                 console.log("POST Request for generate time table is successful ", data);
                 console.log(data);
+                this.generatedfacultyResponseList = data.facultyResponses;
+                this.generatedSectionsList = data.sections;
+                
             },
             error => {
                 console.log("Error: couldn't generate again", error);
