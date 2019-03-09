@@ -114,6 +114,7 @@ export class AdminPortalComponent implements OnInit {
       this.overallTT = data;
       this.generatedfacultyResponseList = data.facultyResponses; 
       this.generatedSectionsList =  data.sections;
+      alert("Successfully Generated!");
     });
 
   }
@@ -132,10 +133,12 @@ export class AdminPortalComponent implements OnInit {
                 this.overallTT = data;
                 this.generatedfacultyResponseList = data.facultyResponses;
                 this.generatedSectionsList = data.sections;
+                alert("Successfully Generated!");
 
             },
             error => {
                 console.log("Error: couldn't generate again", error);
+                alert("Please Try Again!");
             }
         ); 
 
